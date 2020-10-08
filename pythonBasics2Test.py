@@ -1,4 +1,4 @@
-import pythonBasics2_sol as pythonBasics2
+import pythonBasics2 as pythonBasics2
 # main() is already set up to call the functions
 # we want to test with a few different inputs,
 # printing 'OK' when each function call is correct.
