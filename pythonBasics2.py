@@ -7,11 +7,18 @@
 # Part A. char_exists
 # Define a function char_exists(str,chr) that takes a string and a character
 # and returns the number of times (count) this character appeared in the string.
-# If the string is empty and the character is not in the string it should return zero
+# If the string is empty or the character is not in the string it should return zero
 def char_exists(s, char):
     # YOUR CODE HERE
+    count = 0
 
-    return
+    if len(s) == 0:
+        return count
+    for i in range (0, len(s)): # for c in s: if c ==char
+        if s[i] == char:
+            count +=1 # count = count +1
+
+    return count
 
 
 # Part B. char_count

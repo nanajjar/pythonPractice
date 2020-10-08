@@ -1,4 +1,4 @@
-import pythonBasics2 as pythonBasics2
+import pythonBasics2
 # main() is already set up to call the functions
 # we want to test with a few different inputs,
 # printing 'OK' when each function call is correct.
@@ -10,7 +10,7 @@ import pythonBasics2 as pythonBasics2
 def main():
     # set which functions to test
     char_exists = True
-    char_remove = True
+    char_remove = False
 
     if char_exists:
         print()
