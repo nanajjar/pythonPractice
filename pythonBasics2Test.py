@@ -6,7 +6,7 @@ import pythonBasics2 as pythonBasics2
 # what each function returns vs. what it's supposed to return.
 
 
-# Calls the functions in pythonBasics1 with various inputs.
+# Calls the functions in pythonBasics2 with various inputs.
 def main():
     # set which functions to test
     char_exists = True
