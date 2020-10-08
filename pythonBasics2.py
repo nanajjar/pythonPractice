@@ -1,4 +1,4 @@
-# Python Activtiy
+# Python activity
 #
 # Fill in the code for the functions below.
 # The starter code for each function includes a 'return'
