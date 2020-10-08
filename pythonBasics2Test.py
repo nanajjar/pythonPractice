@@ -9,8 +9,8 @@ import pythonBasics2
 # Calls the functions in pythonBasics2 with various inputs.
 def main():
     # set which functions to test
-    char_exists = True
-    char_remove = False
+    char_exists = False
+    char_remove = True
 
     if char_exists:
         print()

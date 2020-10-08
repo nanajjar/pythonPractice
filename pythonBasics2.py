@@ -22,9 +22,19 @@ def char_exists(s, char):
 
 
 # Part B. char_count
-# Define a function char_count(str,chr) that takes a string and a character
+# Define a function char_remove(str,chr) that takes a string and a character
 # and returns the string after replacing all occurrences of this character with an underscore
 def char_remove(s, char):
     # YOUR CODE HERE
+    if len(s) == 0:
+        return s
 
-    return
+    newStr =""
+    for i in range (0, len(s)):
+
+        if s[i] == char:
+            newStr += "_"
+        else:
+            newStr += s[i]
+
+    return newStr
