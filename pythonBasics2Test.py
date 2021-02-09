@@ -1,44 +1,51 @@
 import pythonBasics2
+
 # main() is already set up to call the functions
 # we want to test with a few different inputs,
-# printing 'OK' when each function call is correct.
+# printing 'OK' when each function is correct.
 # the simple provided test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
 
-
-# Calls the functions in pythonBasics2 with various inputs.
-def main():
-    # set which functions to test
-    char_exists = False
-    char_remove = True
-
-    if char_exists:
-        print()
-        print('char_exists')
-        test(pythonBasics2.char_exists("hello",'l'),2)
-        test(pythonBasics2.char_exists("hi",'l'),0)
-        test(pythonBasics2.char_exists("",'a'),0)
-        test(pythonBasics2.char_exists("  ",' '),2)
-        test(pythonBasics2.char_exists("abracadabra",'a'),5)
-        test(pythonBasics2.char_exists("pumpkin spice pie",'p'),4)
-
-    if char_remove:
-        print()
-        print('char_remove')
-        test(pythonBasics2.char_remove("hello",'l'),"he__o")
-        test(pythonBasics2.char_remove("hi",'l'),"hi")
-        test(pythonBasics2.char_remove("",'a'),"")
-        test(pythonBasics2.char_remove("abracadabra",'a'),"_br_c_d_br_")
-        test(pythonBasics2.char_remove("pumpkin spice pie",'p'),"_um_kin s_ice _ie")
-
-
 def test(got, expected):
-    if got == expected:
-        prefix = ' OK '
-    else:
-        prefix = '  X '
+    prefix = ' OK ' if got == expected else '  X '
     print ('%s got: %s expected: %s' % (prefix, repr(got), repr(expected)))
 
-# when we run this file we want only the code inside main() to be executed
+def main():
+    # set which functions to test
+    check_count_threes = True
+    check_longest_consecutive_repeating_char = False
+    check_is_palindrome = False
+
+    if check_count_threes:
+        print('Testing count_threes:')
+        test(pythonBasics2.count_threes(0), 0)
+        test(pythonBasics2.count_threes(2), 0)
+        test(pythonBasics2.count_threes(3), 1)
+        test(pythonBasics2.count_threes(6), 2)
+        test(pythonBasics2.count_threes(24), 8)
+
+    if check_longest_consecutive_repeating_char:
+        print("---------------------------------------------------------")
+        print('longest_consecutive_repeating_charater')
+        test(pythonBasics2.longest_consecutive_repeating_char('aaa'), 'a')
+        test(pythonBasics2.longest_consecutive_repeating_char('abba'), 'b')
+        test(pythonBasics2.longest_consecutive_repeating_char('caaddda'), 'd')
+        test(pythonBasics2.longest_consecutive_repeating_char('aaaffftttt'), 't')
+        test(pythonBasics2.longest_consecutive_repeating_char('aaababbacccca'), 'c')
+        test(pythonBasics2.longest_consecutive_repeating_char('ddabab'), 'd')
+        test(pythonBasics2.longest_consecutive_repeating_char('caac'), 'a')
+
+    if check_is_palindrome:
+        print("-------------------------------------------------------")
+        print('Testing is_palindrome')
+        test(pythonBasics2.is_palindrome("Hello"), False)
+        test(pythonBasics2.is_palindrome("civic"), True)
+        test(pythonBasics2.is_palindrome("Civic"), True)
+        test(pythonBasics2.is_palindrome("Racecar"), True)
+        test(pythonBasics2.is_palindrome("Dont nod"), True)
+        test(pythonBasics2.is_palindrome("was it a cat I saw"), True)
+        test(pythonBasics2.is_palindrome("It was not a cat"), False)
+
+
 if __name__ == '__main__':
-    main()
+  main()
